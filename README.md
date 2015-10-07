@@ -1,15 +1,15 @@
 'Evolving' - adaptive object evolution.  Soar above classes, prototypes and mixins
 
-Version: 0.1.0 (semantic versioning)
+Version: v0.1.0 (semantic versioning)
 
 ### Features
 
 Main features:
 
-* Flexibility: compose multiple objects or classes and you can turn objects back into classes!
-* Simplicity: only one method, you can create standard Javascript objects via new
+* Flexibility: compose multiple objects or classes and even turn objects back into classes
+* Simplicity: only one method, lets you create ordinary Javascript objects via new
 * Compatibility: Uses only basic Javascript primitives, and creates standard Javascript classes
-* Clarity: Enforces named constructors and explicity object initialization
+* Clarity: Enforces named constructors and explicit object initialization
 
 ### Synopsis
 
@@ -35,7 +35,7 @@ Person = Evolving::evolve ->
        
 # evolve them into a professor in certain subjects
 Professor = Person::evolve ->
-       # It is assumed that every professors knows rudiments of epistemology!
+       # It is assumed that all professors know rudiments of epistemology!
        @subjects = [ "Epistemology" ] 
        @addSubject = (s)-> @subjects = @subjects.concat([ s ]); @
        @randomSubject = -> @subjects.sort(-> Math.random() - 0.5)[0]

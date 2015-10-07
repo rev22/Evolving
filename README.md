@@ -91,13 +91,15 @@ Evolution is a function called with "this" a new prototype, manipulating it and 
     Person = Evolving::evolve ->
         @greet = (x)-> "Hello, #{x}'
         @
+```
+
+An ordinary Javascript class is returned, which you can instantiate with 'new'.
+
+```coffee	
     p = new Person()
     p.greet "Bob"
 ```
 
-Define the 'evolve' method, that applies 'evolution' to the current class.
-
-It returns an ordinary Javascript class you can instantiate with 'new'.
 
 ### Cheatsheet
 

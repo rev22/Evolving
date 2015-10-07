@@ -103,7 +103,7 @@ An ordinary Javascript class is returned, which you can instantiate with 'new'.
 
 ### Cheatsheet
 
-#### Turn an object into class
+#### Turn an object into a class
 
 This keeps a dynamic link to object via prototype.
 

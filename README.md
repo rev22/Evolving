@@ -42,15 +42,15 @@ Professor = Person::evolve ->
        personIntro = @intro
        @intro = ->
        	      personIntro.call(@) +
-       	      " Today we are going to learn about " +
-	      @randomSubject()
+       	      " Today, we are going to learn about " +
+              @randomSubject()
        @
 
 # Describe the evolution of an Odd Professor, by combining Professor and Cat and adding a training in Sociology
 OddProfessorEvolution = ->
         Professor.evolution.call  @
-	Cat.evolution.call        @
-	@addSubject "Sociology"
+        Cat.evolution.call        @
+        @addSubject "Sociology"
 
 # a kitten is born
 kitten = new Kitten()
@@ -65,13 +65,13 @@ aliceTheCatProfessor = new ( alice.evolve( OddProfessorEvolution ) )
 
 Alice in her own words:
    #{
-	alice.intro()
+       alice.intro()
    }
 
 Alice, after the evolution, introducing herself:
-   #{
-	aliceTheCatProfessor.intro()
-   }
+    #{
+        aliceTheCatProfessor.intro()
+    }
 
 """
        
@@ -81,18 +81,30 @@ Alice, after the evolution, introducing herself:
 
 A single class `Evolving` is defined, with a single method 'evolve'.
 
+```coffee
+    Class::evolve evolution
+```
+
+Evolution is a function called with "this" a new prototype, manipulating it and returning a new prototype.  This is actually really simple:
+
+```coffee
+    Person = Evolving::evolve ->
+        @greet = (x)-> "Hello, #{x}'
+        @
+    p = new Person()
+    p.greet "Bob"
+```
+
 Define the 'evolve' method, that applies 'evolution' to the current class.
 
 It returns an ordinary Javascript class you can instantiate with 'new'.
 
-Technically, since Javascript objects have prototypal inheritance, "classes" are just constructors.
-
-The novelty of this library stands in the possibility of evolving both objects or classes, and
+### Cheatsheet
 
 #### Turn back an object into a class
 
 ```coffee
-	myClass = myObject.evolve( -> )
+	myClass = myObject.evolve( -> @ )
 ```
 
 #### Apply multiple evolutions mixin-style
@@ -100,8 +112,8 @@ The novelty of this library stands in the possibility of evolving both objects o
 ```coffee
     fooBarClass = myClass::evolve ->
         a.evolution @
-	b.evolution @
-	@
+        b.evolution @
+        @
 ```
 
 #### Functionally extend the current object
@@ -110,9 +122,9 @@ This keeps a dynamic link to the base object via prototype.
 
 ```coffee
     extendedObject = new do-> baseObject.evolve ->
-         @foo = 3
-    	 @bar = 3
-	 @    
+        @foo = 3
+        @bar = 3
+        @    
 ```
 
 #### And more...

@@ -1,6 +1,6 @@
 'Evolving' - adaptive object evolution.  Soar above classes, prototypes and mixins
 
-Note this is a first, untested, unversioned release. of the library.
+Version: 0.1.0 (semantic versioning)
 
 ### Features
 
@@ -19,12 +19,12 @@ Main features:
 
 # define a mewing kitten
 Kitten = Evolving::evolve ->
-       @sound = "mew"
+       @sound = "mew~"
        @
 
 # evolve them into a grow cat, who can "meow"
 Cat = Kitten::evolve ->
-       @sound = "meow"
+       @sound = "~meow~"
        @
 
 # define a person with a name
@@ -61,20 +61,17 @@ alice = new ( kitten.evolve( Person.evolution ) ).setName('Alice')
 # evolve Alice into an odd professor
 aliceTheCatProfessor = new ( alice.evolve( OddProfessorEvolution ) )
 
-"""
+console.log """
 
 Alice in her own words:
-   #{
-       alice.intro()
-   }
+
+    #{ alice.intro() }
 
 Alice, after the evolution, introducing herself:
-    #{
-        aliceTheCatProfessor.intro()
-    }
 
-"""
-       
+    #{ aliceTheCatProfessor.intro() }
+
+"""       
 ```
 
 ### Formal API

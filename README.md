@@ -103,7 +103,9 @@ An ordinary Javascript class is returned, which you can instantiate with 'new'.
 
 ### Cheatsheet
 
-#### Turn back an object into a class
+#### Turn an object into class
+
+This keeps a dynamic link to object via prototype.
 
 ```coffee
 	myClass = myObject.evolve( -> @ )

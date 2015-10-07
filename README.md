@@ -112,8 +112,8 @@ This keeps a dynamic link to object via prototype.
 
 ```coffee
     fooBarClass = myClass::evolve ->
-        a.evolution @
-        b.evolution @
+        a.evolution.call @
+        b.evolution.call @
         @
 ```
 

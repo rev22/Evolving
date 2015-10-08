@@ -1,6 +1,6 @@
 'Evolving' - adaptive object evolution.  Soar above classes, prototypes and mixins
 
-Version: v0.1.0 (semantic versioning)
+Version: v0.1.1 (semantic versioning)
 
 ### Features
 

@@ -74,12 +74,12 @@ Alice, after the evolution, introducing herself:
 """       
 ```
 
-### Formal API
+### API
 
 A single class `Evolving` is defined, with a single method 'evolve'.
 
 ```coffee
-    Class::evolve evolution
+    Evolving::evolve evolution
 ```
 
 Evolution is a function called with "this" a new prototype, manipulating it and returning a new prototype.  This is actually really simple:
@@ -111,18 +111,18 @@ This keeps a dynamic link to object via prototype.
 #### Apply multiple evolutions mixin-style
 
 ```coffee
-    fooBarClass = myClass::evolve ->
-        a.evolution @
-        b.evolution @
+    CatDog = Evolving::evolve ->
+        Cat.evolution @
+        Dog.evolution @
         @
 ```
 
-#### Functionally extend the current object
+#### Make an extended version of the current object
 
 This keeps a dynamic link to the base object via prototype.
 
 ```coffee
-    extendedObject = new do-> baseObject.evolve ->
+    extendedSelf = new do=> @evolve ->
         @foo = 3
         @bar = 3
         @    

@@ -31,13 +31,14 @@ var Evolving = (function() {
     var x, y;
     x = function() {};
     x.prototype = this;
-    evolution.call(y = new x).constructor = x;
+    (y = new x).constructor = x;
     x.evolution = evolution;
     x.prototype = y;
-    return x;
+    return evolution.call(y).constructor;
   };
 
   return Evolving;
+
 })();
 
 if (typeof exports !== "undefined" && exports !== null) {

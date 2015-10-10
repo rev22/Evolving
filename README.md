@@ -135,9 +135,9 @@ Many more usage patterns which were difficult to achieve before are now possible
 
 #### Notes
 
-You can define custom implicit constructor in the Evolutions, by modifying '@constructor'.  However it is adviced as a good practice to use named, fluent constructor instead.  This makes it more explicit what is happening during an object's construction, and it helps in the long run if you are going to combine multiple evolutions.
+You can define custom implicit constructor in the Evolutions, by modifying '@constructor'.  However it is a good practice to use named, fluent constructors instead.  This makes it more explicit what is happening during an object's construction, and it helps in the long run if you are going to combine multiple evolutions.
 
-For simplicity we used the common term "class" instead of the technically more correct term "constructor".  Javascript has a prototypal object system, so there is no clear class/instance distinction.  For most use cases, you can use the library without knowing this detail.
+For simplicity we used the common term "class" instead of the technically more correct term "constructor".  Javascript has a prototypal object system, so there is no clear class/instance distinction.  For many use cases, you can use the library without knowing this detail.
 
 
 ### Copyright and licensing

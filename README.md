@@ -9,7 +9,7 @@ Main features:
 * Flexibility: compose multiple objects or classes and even turn objects back into classes
 * Simplicity: only one method, lets you create ordinary Javascript objects via new
 * Compatibility: Uses only basic Javascript primitives, and creates standard Javascript classes
-* Clarity: Enforces named constructors and explicit object initialization
+* Clarity: Encourages named constructors and explicit object initialization
 
 ### Synopsis
 
@@ -135,12 +135,9 @@ Many more usage patterns which were difficult to achieve before are now possible
 
 #### Notes
 
-The only caveat is that this doesn't work with classes that have non-empty constructors.
-So you have to use named constructors.
+You can define custom implicit constructor in the Evolutions, by modifying '@constructor'.  However it is adviced as a good practice to use named, fluent constructor instead.  This makes it more explicit what is happening during an object's construction, and it helps in the long run if you are going to combine multiple evolutions.
 
-This is not necessarily bad, as named constructors are warmly adviced by many expert JS programmers.
-
-In this document, for simplicity we used the term class instead of the more technically correct term "constructor".  But you don't need to know about this technical detail to use this library.
+For simplicity we used the common term "class" instead of the technically more correct term "constructor".  Javascript has a prototypal object system, so there is no clear class/instance distinction.  For most use cases, you can use the library without knowing this detail.
 
 
 ### Copyright and licensing

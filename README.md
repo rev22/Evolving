@@ -147,15 +147,6 @@ In this document, for simplicity we used the term class instead of the more tech
 
     Copyright (c) 2015 Michele Bini
 
-
-    The novel techniques described and implemented by this library
-    encompass object inheritance and composition.
-
-    They may constitute a prior art which the author forbids the use of,
-    inclusion or reference in patents or patent claims by any parties.
-
-    The full licensing terms are in the file GPL-3
-
     
     This program is free software: you can redistribute it and/or modify
     it under the terms of the version 3 of the GNU General Public License
@@ -168,4 +159,3 @@ In this document, for simplicity we used the term class instead of the more tech
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-

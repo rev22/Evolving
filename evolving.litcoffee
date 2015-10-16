@@ -5,13 +5,6 @@
     Copyright (c) 2015 Michele Bini
 
 
-    The novel techniques described and implemented by this library
-    encompass object inheritance and composition.
-
-    They may constitute a prior art which the author forbids the use of,
-    inclusion or reference in patents or patent claims by any parties.
-
-
     This library is free software: you can redistribute it and/or modify
     it under the terms of the version 3 of the GNU General Public License
     as published by the Free Software Foundation.
